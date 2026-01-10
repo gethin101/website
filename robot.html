@@ -1,3 +1,124 @@
-<p style="font-size: 50px; padding: 50px; text-align: center;">
- robot
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GG Battle Robot ¦ Gethin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="Images/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="style.css">
+
+ <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</script>
+</head>
+
+
+<body>
+
+
+<div class="header">
+  <p class="title">GG Battle Robot</p>
+
+  <div class="header-icons">
+    <div class="icon-group">
+      <a href="https://www.printables.com/@Gethin_4065401" target="_blank">
+        <img src="Images/printables.png" alt="Printables">
+      </a>
+
+      <a href="https://github.com/gethin101" target="_blank">
+        <img src="Images/github.png" alt="GitHub">
+      </a>
+    </div>
+
+    <div class="moon-wrap">
+      <button id="darkToggle">🌙</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="intro">
+
+  <p style="margin-top: 20px;">
+    <a href="portfolio.html" style="text-decoration:none; font-size:20px; color:#333;">← Back to Home page</a>
+  </p>
+</div>
+
+
+
+
+<section class="article">
+  <h2>Overview</h2>
+  <p>
+    This is a project I made to improve my CAD skills in Fusion 360, learn PCB design & manufacture and act as my first personal electronics project.</br>
+
+<p></p>
+
+The robot is controlled by two Raspberry Pi Picos and a custom PCB remote that works with radio frequency to send signals to the main robot, TT motors and servo motor to move the wheels and axe weapon.
+  </p>
+  <img src="Images/robot_overview.png" alt="Robot Overview" style="height:%; width:90%">
+</section>
+
+
+
+<section class="article">
+  <h2>Original Design Sketch</h2>
+  <p>
+    The first stage of the project involved making a rough sketch of the electronics and visualising the general placement of each component.
+  </p>
+
+  <img src="Images/robot_sketch.jpg" alt="Robot Sketch" style="width: 60%; float: left; margin-right: 20px; margin-bottom: 10px;">
+
+
+
+  <h3><b><u>Components Used:</u></b></h3>
+  <p><b>Raspberry Pi Pico 2 WH</b> – Microcontrollers</p>
+  <p><b>TT motors</b> – Move wheels</p>
+  <p><b>L298N motor drivers</b> – Control TT motors</p>
+  <p><b>Servo motor</b> – Control axe weapon</p>
+  <p><b>433mhz radio frequency</b> – Send signals</p>
+  <p><b>Battery pack</b> – Power robot</p>
+  <p><b>Breadboard</b> – Robot main connection</p>
+  <p><b>Jumper wires</b> – Component wiring</p>
+  <p><b>PLA Axe</b> – Robot's main weapon</p>
+
+
+  <div class="note-box">
+    <p><strong>Note:</strong> We decided to use a breadboard so we don't have to solder anything and can change wiring easily. </p>
+  </div>
+
+  <div style="clear: both;"></div>
+</section>
+
+
+
+
+  <section class="article">
+    <h2>First chassis 3D Model</h2>
+    <model-viewer src="testglb.glb"
+        alt="test design"
+        auto-rotate
+        camera-controls
+        ar
+        environment-image="neutral"
+        exposure="1.2"
+        style="width: 600px; height: 400px;">
+    </model-viewer>
+  </section>
+
+
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const toggle = document.getElementById("darkToggle");
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+</script>
+
+</body>
+</html>
