@@ -1,273 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gethin Portfolio</title>
+  <title>Gethin's Portfolio ¦ 2026</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-     body {
-      margin: 0;
-      transition: background-color 0.7s ease, color 0.7s ease;
-      }
-
-
-
-   .header {
-    background-color: #0a1f44;
-    color: white;
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* right */
-    font-family: "Lexend", sans-serif;
-    transition: background-color 0.5s ease;
-   }
-
-   .title {
-     font-size: 20pt;
-     margin: 0;
-   }
-
-   .header-icons {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 15px;
-   } 
-
-   .header-icons img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s ease;
-   }
-
-   .header-icons a:nth-child(2) img {
-    filter: invert(1);
-   }
-
-   .header-icons a img {
-     margin-top: 8px;
-    }
-
-   .header-icons img:hover {
-    transform: scale(1.15);
-    cursor: pointer;
-   }
-
-   .icon-group {
-    display: flex;
-    gap: 15px;
-    margin-right: 8px;
-   }
-
-   
-   .icon-group a:first-child img {
-     width: 35px;
-     height: 35px;
-    }
-   
-
-
-   #darkToggle {
-     background: none;
-     border: none;
-     color: white;
-     font-size: 24px;
-     cursor: pointer;
-     transition: transform 0.2s ease; translateX(-2px);
-    }
-
-   #darkToggle:hover {
-    transform: scale(1.2);
-    }
-
-   .moon-wrap {
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    margin-left: -10px;
-   }
-
-   
-   .image-box1 {
-    display: flex;
-    justify-content: center;
-    gap: 80px; /* gap between */
-    margin-top: 100px; /* high or low on page */
-   } 
-
-   .square {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    width: 450px;
-    height: 450px;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18pt;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    overflow: hidden;
-    border: 6px solid;
-    border-image: linear-gradient(45deg, #F0070A, #3333ff) 1; /*redblue*/
-    border-radius: 12px;
-    transition: background-color 0.5s ease, transform 0.5s ease, border-image 0.6s ease;
-   }
- 
-
-   .square:hover { /* when mouse over */
-     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
-     border-image: linear-gradient(45deg, #33cccc, #6600cc) 1;
-     transform: scale(1.05);
-     cursor: pointer;
-    }
-
-
-   .square img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover
-   }
-
- 
-    .item a {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-decoration: none;
-    }
- 
-
-    .label {
-     font-size: 30px;
-     font-weight: 400;
-     margin-bottom: 20px;
-     color:black;
-     font-family: "Lexend", serif;
-     transition: color 0.8s ease, transform 0.5s ease;
-    }
- 
-    .label:hover {
-      color: #000066;
-      transform: scale(1.15);
-     }
-  
-
-    .intro {
-      max-width: 900px;
-      margin: 50px auto 0px;
-      padding: 0 20px;
-      font-family: "Lexend", sans-serif;
-      font-size: 22px;
-      line-height: 1.6;
-      text-align: center;
-      color: #333;
-      transition: color 0.5s ease, border-image 0.5s ease;
-     }
-
-    
-/* DARK MODE */ 
-  
-    .dark-mode {
-      background-color: #0b0b0d;
-      color: #e6e6e6;
-     }
-
-    .dark-mode .header {
-      background-color: #b5b5b5;
-     }
-
-    .dark-mode .intro {
-      color: #ddd;
-      border-image: linear-gradient(45deg, #00aaff, #7700ff) 1;
-     }
-
-    .dark-mode .label {
-      color: #e6e6e6;
-     }
-
-    .dark-mode .square {
-      background-color: #1a1a1d;
-      border-image: linear-gradient(45deg, #00aaff, #7700ff) 1;
-     }
-    
-    .dark-mode .title {
-      color: black;
-     }
-
-
-
-  </style>
+  <link rel="icon" href="Images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
- <div class="header">
+<div class="header">
   <p class="title">Gethin's Portfolio</p>
 
   <div class="header-icons">
-    
-  <div class="icon-group">
-   <a href="https://www.printables.com/@Gethin_4065401" target="_blank">
-     <img src="Images/printables.png" alt="Printables">
-   </a>
+    <div class="icon-group">
+      <a href="https://www.printables.com/@Gethin_4065401" target="_blank">
+        <img src="Images/printables.png" alt="Printables">
+      </a>
 
+      <a href="https://github.com/gethin101" target="_blank">
+        <img src="Images/github.png" alt="GitHub">
+      </a>
+    </div>
 
-   <a href="https://github.com/gethin101" target="_blank">
-     <img src="Images/github.png" alt="GitHub">
-   </a>
-  </div>
-
- <div class="moon-wrap">
-   <button id="darkToggle">🌙</button>
-   </div>
+    <div class="moon-wrap">
+      <button id="darkToggle">🌙</button>
+    </div>
   </div>
 </div>
 
- 
-  <div class="intro">
-   <p>
-     This is my porfolio site where I showcase my computing and electronics projects</br>
-     Click one of the images below to explore the project</br>
-   </p>
-  </div>
-
+<div class="intro">
+  <p>
+    This is my porfolio site where I showcase my computing and electronics projects<br>
+    Click one of the images below to explore the project<br>
+  </p>
+</div>
 
 <div class="image-box1">
 
- <div class="item">
-  <a href="robot.html" style="text-decoration: none;">
-    <p class="label">GG Battle Robot</p>
-    <div class="square">
-    <img src="Images/image_1.png" alt="Battle Robot">
-    </div>
-  </a>
- </div>
+  <div class="item">
+    <a href="robot.html">
+      <p class="label">GG Battle Robot</p>
+      <div class="square">
+        <img src="Images/image_1.png" alt="Battle Robot">
+      </div>
+    </a>
+  </div>
 
+  <div class="item">
+    <a href="electronics.html">
+      <p class="label">Electronics</p>
+      <div class="square">
+        <img src="Images/image_2.jpeg" alt="Electronics (lcd)">
+      </div>
+    </a>
+  </div>
 
- <div class="item">
-  <a href="electronics.html" style="text-decoration: none;">
-    <p class="label">Electronics</p>
-    <div class="square">
-    <img src="Images/image_2.jpeg" alt="Electronics (lcd)">
-    </div>
-  </a>
- </div>
-
-
- <div class="item">
-  <a href="macropad.html" style="text-decoration: none;">
-    <p class="label">Custom Macropad</p>
-    <div class="square">
-    <img src="Images/image_3.jpeg" alt="hackpad">
-    </div>
-  </a>
- </div>
+  <div class="item">
+    <a href="macropad.html">
+      <p class="label">Custom Macropad</p>
+      <div class="square">
+        <img src="Images/image_3.jpeg" alt="hackpad">
+      </div>
+    </a>
+  </div>
 
 </div>
 
@@ -276,16 +73,9 @@
 
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
-
-    // swap icon
-    if (document.body.classList.contains("dark-mode")) {
-      toggle.textContent = "☀️";
-     } else {
-      toggle.textContent = "🌙";
-     }
-   });
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
 </script>
 
-
-
 </body>
+</html>
