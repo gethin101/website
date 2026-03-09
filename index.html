@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gethin Portfolio</title>
+<title>Access</title>
 
-
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
     body {
         margin: 0;
-        background-color: #0a1f44;
+        background-color: #07142c;
         color: white;
         font-family: "Lexend", sans-serif;
         transition: background-color 0.7s ease, color 0.7s ease;
     }
 
     .header {
-        background-color: #0a1f44;
+        background-color: #000000;
         color: white;
         height: 65px;
         display: flex;
@@ -37,27 +37,26 @@
     }
 
     .password-box {
-        background: #d9d9d9;
+        background: white;
         padding: 35px;
         border-radius: 12px;
         width: 350px;
         text-align: center;
-        border: 6px solid;
-        border-image: linear-gradient(45deg, #F0070A, #3333ff) 1;
+        border: 4px solid black;
         box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        transition: transform 0.4s ease, border-image 0.5s ease;
+        transition: transform 0.4s ease;
+        color: black;
     }
 
     .password-box:hover {
         transform: scale(1.03);
-        border-image: linear-gradient(45deg, #33cccc, #6600cc) 1;
     }
 
     input[type="password"] {
         width: 80%;
         padding: 12px;
         border-radius: 8px;
-        border: none;
+        border: 2px solid black;
         font-size: 16px;
         margin-top: 10px;
         outline: none;
@@ -66,7 +65,7 @@
     button {
         margin-top: 18px;
         padding: 12px 25px;
-        background-color: #0a1f44;
+        background-color: #000000;
         color: white;
         border: none;
         border-radius: 8px;
@@ -77,49 +76,28 @@
 
     button:hover {
         transform: scale(1.07);
-        background-color: #112b5c;
+        background-color: #222222;
     }
 
     #error {
         margin-top: 12px;
-        color: #ff6b6b;
+        color: #ff3b3b;
         font-size: 14px;
         display: none;
-    }
-
-
-    .dark-mode {
-        background-color: #0b0b0d;
-        color: #e6e6e6;
-    }
-
-    .dark-mode .header {
-        background-color: #b5b5b5;
-        color: black;
-    }
-
-    .dark-mode .password-box {
-        background-color: #1a1a1d;
-        color: #e6e6e6;
-        border-image: linear-gradient(45deg, #00aaff, #7700ff) 1;
-    }
-
-    .dark-mode button {
-        background-color: #333;
     }
 </style>
 
 </head>
 <body>
 
-<div class="header">Gethin Porfolio</div>
+<div class="header">Access Portal</div>
 
 <div class="container">
     <div class="password-box">
-        <h2 style="color:black; font-weight:400;">Enter password</h2>
+        <h2 style="font-weight:400;">Enter Access Code</h2>
         <input type="password" id="pass" placeholder="Password">
         <button onclick="checkPass()">Enter</button>
-        <div id="error">Incorrect - try again</div>
+        <div id="error">Incorrect code. Try again.</div>
     </div>
 </div>
 
