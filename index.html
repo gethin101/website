@@ -2,81 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gethin Portfolio</title>
+<title>Access</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
     body {
         margin: 0;
-        height: 100vh;
+        background-color: #0a1f44;
+        color: white;
+        font-family: "Lexend", sans-serif;
+        transition: background-color 0.7s ease, color 0.7s ease;
+    }
+
+    .header {
+        background-color: #0a1f44;
+        color: white;
+        height: 65px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #0a1a33; /* Navy blue */
-        font-family: Arial, sans-serif;
-        color: white;
+        font-size: 20pt;
+        font-weight: 400;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
 
     .container {
+        margin-top: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .password-box {
+        background: #d9d9d9;
+        padding: 35px;
+        border-radius: 12px;
+        width: 350px;
         text-align: center;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 40px;
-        border-radius: 10px;
-        backdrop-filter: blur(5px);
+        border: 6px solid;
+        border-image: linear-gradient(45deg, #F0070A, #3333ff) 1;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        transition: transform 0.4s ease, border-image 0.5s ease;
+    }
+
+    .password-box:hover {
+        transform: scale(1.03);
+        border-image: linear-gradient(45deg, #33cccc, #6600cc) 1;
     }
 
     input[type="password"] {
+        width: 80%;
         padding: 12px;
-        width: 220px;
+        border-radius: 8px;
         border: none;
-        border-radius: 5px;
-        margin-top: 10px;
         font-size: 16px;
+        margin-top: 10px;
+        outline: none;
     }
 
     button {
-        margin-top: 15px;
+        margin-top: 18px;
         padding: 12px 25px;
-        background-color: white;
-        color: #0a1a33;
+        background-color: #0a1f44;
+        color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         font-size: 16px;
         cursor: pointer;
-        font-weight: bold;
+        transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
     button:hover {
-        background-color: #dfe6f2;
+        transform: scale(1.07);
+        background-color: #112b5c;
     }
 
     #error {
-        margin-top: 15px;
+        margin-top: 12px;
         color: #ff6b6b;
         font-size: 14px;
         display: none;
     }
+
+    /* Dark mode compatibility */
+    .dark-mode {
+        background-color: #0b0b0d;
+        color: #e6e6e6;
+    }
+
+    .dark-mode .header {
+        background-color: #b5b5b5;
+        color: black;
+    }
+
+    .dark-mode .password-box {
+        background-color: #1a1a1d;
+        color: #e6e6e6;
+        border-image: linear-gradient(45deg, #00aaff, #7700ff) 1;
+    }
+
+    .dark-mode button {
+        background-color: #333;
+    }
 </style>
+
 </head>
 <body>
 
+<div class="header">Access Portal</div>
+
 <div class="container">
-    <h2>Enter password</h2>
-    <input type="password" id="pass" placeholder="Password">
-    <br>
-    <button onclick="checkPass()">Enter</button>
-    <div id="error">Incorrect - try again</div>
+    <div class="password-box">
+        <h2 style="color:black; font-weight:400;">Enter Access Code</h2>
+        <input type="password" id="pass" placeholder="Password">
+        <button onclick="checkPass()">Enter</button>
+        <div id="error">Incorrect code. Try again.</div>
+    </div>
 </div>
 
 <script>
-function checkPass() {
-    const code = document.getElementById("pass").value;
-    const error = document.getElementById("error");
+    const input = document.getElementById("pass");
 
-    if (code === "101") {
-        window.location.href = "home.html";
-    } else {
-        error.style.display = "block";
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            checkPass();
+        }
+    });
+
+    function checkPass() {
+        const code = input.value;
+        const error = document.getElementById("error");
+
+        if (code === "101") {
+            window.location.href = "home.html";
+        } else {
+            error.style.display = "block";
+        }
     }
-}
 </script>
 
 </body>
